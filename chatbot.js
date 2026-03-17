@@ -977,7 +977,7 @@ document.addEventListener('DOMContentLoaded', () => {
         launcher.id = 'chatbotLauncher';
         launcher.setAttribute('aria-label', 'Open chatbot');
         launcher.innerHTML = `
-            <i class="fas fa-comment-dots icon-chat"></i>
+            <img src="laptop.png" alt="Chat" class="icon-chat launcher-img" />
             <i class="fas fa-times icon-close"></i>
             <span class="badge">1</span>
         `;

@@ -56,6 +56,14 @@
     transition: transform 0.35s ease, opacity 0.35s ease;
 }
 
+.chatbot-launcher .launcher-img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
 .chatbot-launcher .icon-close {
     opacity: 0;
     transform: rotate(-90deg) scale(0.5);
