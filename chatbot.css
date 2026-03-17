@@ -5,12 +5,12 @@
 /* ===== LAUNCHER BUTTON ===== */
 .chatbot-launcher {
     position: fixed;
-    bottom: 28px;
-    right: 28px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary), var(--accent));
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 0;
+    background: transparent;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -19,13 +19,13 @@
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    box-shadow: 0 6px 24px rgba(108, 99, 255, 0.45);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: none;
+    transition: transform 0.3s ease;
 }
 
 .chatbot-launcher:hover {
     transform: scale(1.1);
-    box-shadow: 0 8px 32px rgba(108, 99, 255, 0.55);
+    box-shadow: none;
 }
 
 .chatbot-launcher .badge {
@@ -57,10 +57,10 @@
 }
 
 .chatbot-launcher .launcher-img {
-    width: 36px;
-    height: 36px;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    border-radius: 50%;
+    border-radius: 0;
     pointer-events: none;
 }
 
@@ -487,9 +487,9 @@
     }
 
     .chatbot-launcher {
-        bottom: 20px;
-        right: 20px;
-        width: 54px;
-        height: 54px;
+        bottom: 14px;
+        right: 14px;
+        width: 70px;
+        height: 70px;
     }
 }
