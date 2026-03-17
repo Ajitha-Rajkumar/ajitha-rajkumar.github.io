@@ -988,7 +988,7 @@ document.addEventListener('DOMContentLoaded', () => {
         chatWindow.id = 'chatbotWindow';
         chatWindow.innerHTML = `
             <div class="chatbot-header">
-                <div class="chatbot-avatar"><i class="fas fa-robot"></i></div>
+                <div class="chatbot-avatar"><img src="laptop.png" alt="Bot" class="chatbot-avatar-img" /></div>
                 <div class="chatbot-header-info">
                     <h4>Ajitha's Portfolio Bot</h4>
                     <p><span class="online-dot"></span> Online — I can control this website!</p>
@@ -1047,7 +1047,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const typing = document.createElement('div');
         typing.className = 'typing-indicator';
         typing.innerHTML = `
-            <div class="msg-avatar"><i class="fas fa-robot"></i></div>
+            <div class="msg-avatar"><img src="laptop.png" alt="Bot" class="msg-avatar-img" /></div>
             <div class="typing-dots"><span></span><span></span><span></span></div>
         `;
         messagesContainer.appendChild(typing);
@@ -1061,7 +1061,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const msg = document.createElement('div');
             msg.className = 'chat-message bot';
             msg.innerHTML = `
-                <div class="msg-avatar"><i class="fas fa-robot"></i></div>
+                <div class="msg-avatar"><img src="laptop.png" alt="Bot" class="msg-avatar-img" /></div>
                 <div class="msg-bubble">${html}</div>
             `;
             messagesContainer.appendChild(msg);
