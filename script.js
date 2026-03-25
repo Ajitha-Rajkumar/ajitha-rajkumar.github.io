@@ -79,48 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ========== TYPEWRITER EFFECT ==========
-    const typewriterEl = document.getElementById('typewriter');
-    const titles = [
-        'Certified Scrum Master',
-        'Agile Delivery Project Manager',
-        'AI & Automation Enthusiast',
-        'Siteforge Feature Lead',
-        'Power BI Data Analyst',
-        'Driving Fiber Network Transformation'
-    ];
-    let titleIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typeSpeed = 80;
-
-    function typeWriter() {
-        const currentTitle = titles[titleIndex];
-
-        if (isDeleting) {
-            typewriterEl.textContent = currentTitle.substring(0, charIndex - 1);
-            charIndex--;
-            typeSpeed = 40;
-        } else {
-            typewriterEl.textContent = currentTitle.substring(0, charIndex + 1);
-            charIndex++;
-            typeSpeed = 80;
-        }
-
-        if (!isDeleting && charIndex === currentTitle.length) {
-            typeSpeed = 2000; // Pause at end
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            titleIndex = (titleIndex + 1) % titles.length;
-            typeSpeed = 500; // Pause before next word
-        }
-
-        setTimeout(typeWriter, typeSpeed);
-    }
-
-    typeWriter();
-
     // ========== ANIMATED COUNTER ==========
     const statNumbers = document.querySelectorAll('.stat-number');
     let countersAnimated = false;
