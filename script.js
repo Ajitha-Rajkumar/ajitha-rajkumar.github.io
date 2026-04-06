@@ -153,9 +153,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     animateCounters();
                 }
             });
-        }, { threshold: 0.5 });
+        }, { threshold: 0.1 });
         statsObserver.observe(heroStats);
     }
+
+    // Fallback: trigger counters after hero CSS animations complete
+    setTimeout(animateCounters, 1500);
 
     // Observe skills section for skill bar animation
     const skillsSection = document.getElementById('skills');
