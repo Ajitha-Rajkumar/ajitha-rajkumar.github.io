@@ -108,15 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
         countersAnimated = true;
     }
 
-    // ========== SKILL BAR ANIMATION ==========
-    function animateSkillBars() {
-        const skillFills = document.querySelectorAll('.skill-fill');
-        skillFills.forEach(fill => {
-            const width = fill.getAttribute('data-width');
-            fill.style.width = width + '%';
-        });
-    }
-
     // ========== SCROLL REVEAL ==========
     function addRevealClasses() {
         const elements = document.querySelectorAll(
@@ -159,19 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fallback: trigger counters after hero CSS animations complete
     setTimeout(animateCounters, 1500);
-
-    // Observe skills section for skill bar animation
-    const skillsSection = document.getElementById('skills');
-    if (skillsSection) {
-        const skillsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setTimeout(animateSkillBars, 300);
-                }
-            });
-        }, { threshold: 0.2 });
-        skillsObserver.observe(skillsSection);
-    }
 
     // ========== FLOATING PARTICLES ==========
     const particlesContainer = document.getElementById('particles');

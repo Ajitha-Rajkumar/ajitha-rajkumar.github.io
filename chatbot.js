@@ -1,5 +1,5 @@
 // ========================================
-//  AI-POWERED PORTFOLIO CHATBOT
+//  INTERACTIVE PORTFOLIO CHATBOT
 //  Recruiter-focused Q&A assistant
 // ========================================
 
@@ -11,11 +11,11 @@
     // =============================================
     const PROFILE = {
         name: 'Ajitha Rajkumar',
-        role: 'Project Manager | AI & Automation Enthusiast',
+        role: 'Project Manager | Digital Transformation & Process Automation',
         company: 'Jio Platforms Limited',
         experience: '3.8+',
         location: 'Mumbai, India (Open to Remote)',
-        email: 'ajitha.rajkumar@email.com',
+        email: 'ajitharajkumar84@gmail.com',
         linkedin: 'https://www.linkedin.com/in/ajitha-rajkumar/',
         github: 'https://github.com/Ajitha-Rajkumar',
         resumeFile: 'Ajitha_Rajkumar_Resume.pdf',
@@ -25,29 +25,37 @@
         targetRoles: 'Project Manager, Delivery Manager, Product Manager, Scrum Master, PMO / Program Management, AI & Digital Transformation PM',
     };
 
-    const ELEVATOR_PITCH = `I'm a Project Manager with <strong>${PROFILE.experience} years</strong> at <strong>Jio Platforms</strong>, driving telecom digital transformation, workflow automation, and process optimization across PAN-India operations. CSM-certified, I've delivered <strong>5 key projects</strong> with <strong>&lt;3% budget variance</strong>, including a Fiber Network Automation initiative that <strong>reduced ticket volume by ~70%</strong>.`;
+    const EDUCATION = [
+        { degree: 'PGDM — Data Science & Analytics', institution: 'Great Lakes Institute of Management, Chennai', year: '2024–2026', status: 'Pursuing' },
+        { degree: 'B.E. — Electronics & Telecommunications', institution: 'Don Bosco Institute of Technology, Mumbai', year: '2018–2022', cgpa: '8.69/10' },
+    ];
+
+    const ELEVATOR_PITCH = `I'm a CSM-certified Project Manager who has <strong>progressed through 5 roles</strong> in <strong>${PROFILE.experience} years</strong> at <strong>Jio Platforms</strong> — from delivery coordination to end-to-end program ownership. I've delivered with <strong>&lt;3% budget variance</strong> and <strong>reduced ticket volume by ~70%</strong> through workflow automation. Currently pursuing a <strong>PGDM in Data Science & Analytics</strong> from Great Lakes Institute of Management.`;
 
     const SKILLS = [
-        { name: 'Azure DevOps', detail: 'Sprint planning, feature tracking, project lifecycle management' },
-        { name: 'Project & Delivery Management', detail: 'Agile methodology, milestone tracking, cross-functional coordination' },
-        { name: 'BPMN & Process Design', detail: 'End-to-end process flows, eTOM framework standardization' },
+        { name: 'Project & Delivery Management', detail: 'Agile methodology, milestone tracking, cross-functional coordination, end-to-end SDLC' },
+        { name: 'Azure DevOps', detail: 'Sprint planning, feature tracking, project lifecycle management, delivery pipelines' },
+        { name: 'BPMN & eTOM / TM Forum', detail: 'End-to-end process modeling, telecom operations mapping, enterprise architecture alignment' },
+        { name: 'Programming & Scripting', detail: 'Python, C, SQL, Shell Scripting — data analysis, automation, and backend logic' },
+        { name: 'Databases & Data Management', detail: 'MySQL, MongoDB — query optimization, schema design, data pipelines' },
+        { name: 'Power BI & Data Analytics', detail: 'Dashboards, data-driven reporting, visualization, business intelligence' },
+        { name: 'Testing & API Validation', detail: 'Manual Testing, Postman, Swagger — API testing, integration validation, defect triaging' },
         { name: 'Infrastructure Automation', detail: 'Fiber automation features, SIT delivery, Siteforge feature management' },
-        { name: 'Production Support', detail: 'Ticket resolution, issue triaging, process streamlining' },
-        { name: 'Power BI & Data Analysis', detail: 'Dashboards, data-driven reporting, visualization' },
+        { name: 'AI-Assisted Development', detail: 'Cursor IDE, Claude AI, GitHub Copilot — rapid prototyping, code generation, workflow acceleration' },
     ];
 
     const CERTIFICATIONS = [
-        { name: 'Certified Scrum Master (CSM)', issuer: 'Scrum Alliance', detail: 'Issued Dec 2025 · Expires Dec 2027 · ID: 001806637', link: 'https://www.scrumalliance.org/community/profile/001806637' },
-        { name: 'Microsoft Power BI Data Analyst', issuer: 'Microsoft', detail: 'Coursera Specialization', link: 'https://www.coursera.org/account/accomplishments/specialization/70QBZ1MOQ1JQ' },
-        { name: 'IBM Applied Software Engineering Fundamentals', issuer: 'IBM', detail: 'Coursera Specialization', link: 'https://www.coursera.org/account/accomplishments/specialization/UVDW0NL65AET' },
+        { name: 'Certified Scrum Master (CSM)', issuer: 'Scrum Alliance', detail: 'Industry Certification · Issued Dec 2025 · Expires Dec 2027 · ID: 001806637', link: 'https://www.scrumalliance.org/community/profile/001806637' },
+        { name: 'Microsoft Power BI Data Analyst', issuer: 'Microsoft via Coursera', detail: 'Professional Certificate Specialization · Graded projects & assessments', link: 'https://www.coursera.org/account/accomplishments/specialization/70QBZ1MOQ1JQ' },
+        { name: 'IBM Applied Software Engineering Fundamentals', issuer: 'IBM via Coursera', detail: 'Professional Certificate Specialization · Hands-on labs & assessments', link: 'https://www.coursera.org/account/accomplishments/specialization/UVDW0NL65AET' },
     ];
 
     const PROJECTS = [
         { name: 'Fiber Network Automation & Process Optimization', impact: 'Reduced ticket volume by ~70% through workflow automation and BPMN-based process design' },
         { name: 'SLA-Based Delivery & Governance Framework', impact: 'Improved SLA compliance with centralized tracking, RAID logs, and structured reporting' },
         { name: 'Business Process Documentation & Standardization', impact: 'Standardized workflows using eTOM framework, enabling faster onboarding and automation' },
-        { name: 'AI-Powered Portfolio Chatbot', impact: 'Built an AI chatbot for recruiter engagement, demonstrating AI and product-thinking capability' },
-        { name: 'AI Business Process Analyzer', impact: 'Designing AI-driven process analysis with automated improvement suggestions' },
+        { name: 'Interactive Portfolio Chatbot', impact: 'Built an intelligent chatbot handling 22+ recruiter intents with conversational UX design' },
+        { name: 'AI Business Process Analyzer', impact: 'Designing LLM-driven process analysis with prompt engineering for automated improvement suggestions' },
     ];
 
     // =============================================
@@ -59,12 +67,12 @@
         {
             patterns: ['tell me about ajitha', 'tell me about yourself', 'who are you', 'about yourself', 'introduce', 'introduction', 'about you', 'about ajitha', 'who is ajitha', 'bio', 'background', 'summary', 'overview', 'profile'],
             response: () => ELEVATOR_PITCH,
-            chips: ['Key skills', 'Projects', 'Certifications'],
+            chips: ['Key skills', 'Projects', 'Education'],
         },
         {
             patterns: ['current role', 'current position', 'what do you do', 'designation', 'title', 'role now', 'your role', 'job title', 'what is your role', 'position'],
-            response: () => `I've been a <strong>Project Manager</strong> at <strong>${PROFILE.company}</strong> since July 2022, leading telecom digital transformation, workflow automation, and process optimization projects across PAN-India operations using Agile/Scrum methodology.`,
-            chips: ['Tell me about Ajitha', 'Projects', 'Experience'],
+            response: () => `I'm currently a <strong>Project Manager</strong> at <strong>${PROFILE.company}</strong>, owning end-to-end delivery from requirements to post-production support. I've progressively grown through 5 roles since July 2022 — from Delivery Coordinator to full ownership of PAN-India telecom programs. Currently also pursuing <strong>PGDM in Data Science & Analytics</strong> from Great Lakes.`,
+            chips: ['Experience', 'Projects', 'Education'],
         },
         {
             patterns: ['how many years', 'years of experience', 'experience years', 'total experience', 'work experience', 'how long'],
@@ -131,8 +139,8 @@
         },
         {
             patterns: ['ai experience', 'artificial intelligence', 'ai projects', 'machine learning', 'ai work', 'ai skills'],
-            response: () => `I have hands-on AI experience through two projects:<ul><li><strong>AI-Powered Portfolio Chatbot</strong> — Built this chatbot to enable recruiter engagement through conversational AI, demonstrating product-thinking capability.</li><li><strong>AI Business Process Analyzer</strong> (Ongoing) — Designing an AI-driven process analysis system using structured Excel input and prompt engineering to generate automated improvement suggestions.</li></ul>`,
-            chips: ['Projects', 'Key skills', 'Why should we consider you?'],
+            response: () => `I have hands-on experience applying AI and intelligent automation:<ul><li><strong>Interactive Portfolio Chatbot</strong> — Built with JavaScript pattern matching, handling 22+ recruiter intents with conversational UX design.</li><li><strong>AI Business Process Analyzer</strong> (Ongoing) — Designing an LLM-driven process analysis system using Python, structured Excel input, and prompt engineering to generate improvement suggestions.</li><li><strong>AI-Assisted Development</strong> — Proficient with Cursor IDE, Claude AI, and GitHub Copilot for rapid prototyping and workflow acceleration.</li></ul>Currently pursuing <strong>PGDM in Data Science & Analytics</strong> from Great Lakes Institute of Management to deepen my AI/ML foundation.`,
+            chips: ['Projects', 'Key skills', 'Education'],
         },
         {
             patterns: ['management style', 'leadership style', 'how do you manage', 'how do you lead', 'work style', 'approach'],
@@ -165,13 +173,35 @@
         // --- E: Standout ---
         {
             patterns: ['why should we consider', 'why hire', 'why you', 'what sets you apart', 'differentiator', 'stand out', 'unique', 'why should we hire', 'what makes you different', 'value add'],
-            response: () => `Here's what sets me apart:<ul><li><strong>Proven delivery</strong> — ${PROFILE.experience} years, 5 projects, &lt;3% budget variance, ~70% ticket reduction</li><li><strong>Certified expertise</strong> — CSM + Power BI + IBM Software Engineering</li><li><strong>AI builder, not just a user</strong> — Built an AI chatbot and designing an AI process analyzer</li><li><strong>Process + Technology</strong> — Rare combination of BPMN/eTOM process knowledge with hands-on Agile delivery using Azure DevOps</li></ul>`,
+            response: () => `Here's what sets me apart:<ul><li><strong>5 roles in ${PROFILE.experience} years</strong> — Progressed from Delivery Coordinator → Production Support → Business Analyst → Enterprise Architecture → End-to-End PM at Jio</li><li><strong>Proven delivery</strong> — 5 key projects, &lt;3% budget variance, ~70% ticket reduction</li><li><strong>Certified expertise</strong> — CSM + Power BI + IBM Software Engineering</li><li><strong>Process + Technology</strong> — Rare combination of BPMN/eTOM process knowledge with hands-on coding (Python, SQL) and Agile delivery using Azure DevOps</li><li><strong>Continuous learning</strong> — Pursuing PGDM in Data Science & Analytics from Great Lakes</li></ul>`,
             chips: ['Projects', 'Certifications', 'Contact'],
         },
         {
             patterns: ['passion', 'passionate about', 'what drives you', 'motivation', 'interest', 'what excites you'],
-            response: () => `I'm passionate about <strong>applying AI to real business problems</strong>. I don't just manage projects — I build solutions. From automating fiber network workflows to building this AI chatbot and designing a process analyzer, I'm driven by the intersection of <strong>technology, process optimization, and measurable impact</strong>.`,
-            chips: ['AI experience', 'Projects', 'Tell me about Ajitha'],
+            response: () => `I'm passionate about <strong>bridging technology and business outcomes</strong>. I don't just manage projects — I build solutions. From automating fiber network workflows to building this interactive chatbot using JavaScript pattern matching, and designing an LLM-based process analyzer, I'm driven by the intersection of <strong>technology, process optimization, and measurable impact</strong>. Pursuing my PGDM in Data Science is the next step in deepening that capability.`,
+            chips: ['AI experience', 'Projects', 'Education'],
+        },
+
+        // --- F: Education ---
+        {
+            patterns: ['education', 'qualification', 'degree', 'college', 'university', 'academic', 'pgdm', 'great lakes', 'don bosco', 'btech', 'engineering', 'mba', 'school', 'studied', 'graduation'],
+            response: () => {
+                const list = EDUCATION.map(e => {
+                    let line = `<li><strong>${e.degree}</strong><br>${e.institution} | ${e.year}`;
+                    if (e.status) line += ` <em>(${e.status})</em>`;
+                    if (e.cgpa) line += `<br>CGPA: <strong>${e.cgpa}</strong>`;
+                    return line + '</li>';
+                }).join('');
+                return `Here's my educational background:<ul>${list}</ul>`;
+            },
+            chips: ['Key skills', 'Experience', 'Certifications'],
+        },
+
+        // --- G: Experience Progression ---
+        {
+            patterns: ['experience', 'career progression', 'career growth', 'role progression', 'growth at jio', 'career path', 'journey', 'work history', 'career journey'],
+            response: () => `I've had a <strong>progressive growth journey</strong> at Jio Platforms across 5 distinct phases:<ul><li><strong>Jul–Dec 2022:</strong> Delivery Coordinator — Managed SIT feature delivery, led scrum calls with dev/test teams</li><li><strong>Jan–Dec 2023:</strong> Production Support Lead — Resolved production tickets, achieved ~70% ticket reduction</li><li><strong>Jan–Jun 2024:</strong> Business Analyst — Documented as-is processes in Avolution Abacus using BPMN methodology</li><li><strong>Jul–Dec 2024:</strong> Enterprise Architecture — Collaborated with Solution Architects on eTOM/TM Forum system mapping</li><li><strong>Jan 2025–Present:</strong> Project Manager (E2E) — Full ownership from requirements to post-production support with &lt;3% budget variance</li></ul>`,
+            chips: ['Education', 'Projects', 'Key skills'],
         },
     ];
 
@@ -190,9 +220,9 @@
         'Tell me about Ajitha',
         'Key skills',
         'Projects',
+        'Experience',
+        'Education',
         'Certifications',
-        'Download resume',
-        'Why should we consider you?',
         'Contact',
     ];
 
