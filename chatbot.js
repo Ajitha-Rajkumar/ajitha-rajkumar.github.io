@@ -10,7 +10,7 @@
     //  KNOWLEDGE BASE
     // =============================================
     const PROFILE = {
-        name: 'Ajitha Rajkumar',
+        name: 'Ajitha Rajkumar CSM®',
         role: 'Project Manager | Digital Transformation & Process Automation',
         company: 'Jio Platforms Limited',
         experience: '3.8+',
